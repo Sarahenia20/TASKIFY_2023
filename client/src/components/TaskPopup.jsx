@@ -95,7 +95,7 @@ const TaskPopup = (props) => {
   };
 
   const isDisabled = (p, r)=>{
-    if(!Array.isArray(r)) return false;
+    if(!Array.isArray(r) || r.includes("ADMIN")) return false;
     if(r.includes("MANAGER") && p === "assigns") return false
     else if(r.includes("DESIGNER") && p === "status") return false
     else if(r.includes("CM")) return false;

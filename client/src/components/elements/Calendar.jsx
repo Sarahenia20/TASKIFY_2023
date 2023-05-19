@@ -46,7 +46,7 @@ const eventStyleGetter = (event, start, end, isSelected) => {
   }
   
   return {
-    backgroundColor: colors[event.type]
+    style: { backgroundColor: colors[event.type] }
 };
 }
 
